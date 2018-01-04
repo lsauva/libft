@@ -6,14 +6,14 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 12:44:25 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/11/29 22:14:10 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 15:26:48 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** DESCRIPTION : Verifie si un caractere est un espace ' ', une tabulation '\t'
+** DESCRIPTION : Verifie si c est un espace ' ' ou une tabulation '\t'
 **
 ** PARAM #1 : Le caractere a tester.
 **

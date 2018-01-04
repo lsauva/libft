@@ -6,7 +6,7 @@
 /*   By: lsauvage <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:27:20 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/11/30 16:45:32 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 16:00:50 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,17 @@ int					ft_islower(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
+int					ft_isxdigit(int c);
 char				*ft_itoa(int n);
 void				ft_lstadd(t_list **alst, t_list *newl);
+t_list				*ft_lstat(t_list *lst, size_t val);
+size_t				ft_lstcount(t_list *lst);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstrev(t_list **alst);
 int					ft_max(int a, int b);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -57,6 +61,7 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 int					ft_min(int a, int b);
+int					ft_next_prime(int nbr);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl(char const *s);

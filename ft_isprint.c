@@ -6,16 +6,18 @@
 /*   By: lsauvage <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 15:20:57 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/12/01 15:36:45 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 15:34:03 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Return 1 if c is printable, 0 if not
+** Retourne 1 si le caractere c est imprimable (entre 32 et 126 en valeur ASCII)
+*/
+
 int		ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	return (c >= ' ' && c <= '~');
 }

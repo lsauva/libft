@@ -6,16 +6,18 @@
 /*   By: lsauvage <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:40:17 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/12/01 15:33:13 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 15:29:07 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Return 1 if c is a digit, 0 if not.
+** Retourne 1 si c est un chiffre, 0 sinon.
+*/
+
 int		ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	return (c >= '0' && c <= '9');
 }

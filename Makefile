@@ -6,7 +6,7 @@
 #    By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 17:09:28 by lsauvage          #+#    #+#              #
-#    Updated: 2017/11/30 16:52:07 by lsauvage         ###   ########.fr        #
+#    Updated: 2018/01/04 16:03:05 by lsauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,13 +36,17 @@ SRC = 	ft_abs.c				\
 		ft_isprint.c			\
 		ft_isspace.c			\
 		ft_isupper.c			\
+		ft_isxdigit.c			\
 		ft_itoa.c				\
 		ft_lstadd.c				\
+		ft_lstat.c				\
+		ft_lstcount.c			\
 		ft_lstdel.c				\
 		ft_lstdelone.c			\
 		ft_lstiter.c			\
 		ft_lstmap.c				\
 		ft_lstnew.c				\
+		ft_lstrev.c				\
 		ft_max.c				\
 		ft_memalloc.c			\
 		ft_memccpy.c			\
@@ -53,6 +57,7 @@ SRC = 	ft_abs.c				\
 		ft_memmove.c			\
 		ft_memset.c				\
 		ft_min.c				\
+		ft_next_prime.c			\
 		ft_putchar.c			\
 		ft_putchar_fd.c			\
 		ft_putendl.c			\

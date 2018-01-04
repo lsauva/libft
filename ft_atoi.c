@@ -6,11 +6,16 @@
 /*   By: lsauvage <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 10:27:10 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/11/22 14:56:18 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 14:42:01 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Transforme une chaine de caracteres en entier.
+** Convert a string to integer.
+*/
 
 int		ft_atoi(const char *str)
 {

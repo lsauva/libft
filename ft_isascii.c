@@ -6,16 +6,18 @@
 /*   By: lsauvage <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 15:18:55 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/11/16 17:27:35 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 15:24:43 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Return 1 if c is ascii, 0 if not.
+** Retourne 1 si c est un caractere ascii, 0 sinon
+*/
+
 int		ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (c >= 0 && c <= 127);
 }

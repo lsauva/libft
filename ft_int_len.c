@@ -6,11 +6,16 @@
 /*   By: lsauvage <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 19:09:40 by lsauvage          #+#    #+#             */
-/*   Updated: 2017/11/21 14:32:54 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/01/04 15:04:50 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Return the number of char in an integer.
+** Retourne le nombre de caracteres d'un entier.
+*/
 
 int		ft_int_len(int n)
 {
