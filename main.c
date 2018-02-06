@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/06 19:29:36 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/02/06 19:42:36 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/02/06 19:59:24 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 */
 
 #include "./libft.h"
+#include <stdio.h>
 
 int     main(int ac, char **av)
 {
     if (ac == 2)
     {
-        printf("strlen : %d", strlen(av[1]));
-        printf("ft_strlen : %d", ft_strlen(av[1]));
-        printf("ft_strlen_bitwise : %d", ft_strlen_bitwise(av[1]));
+        printf("strlen : %lu", strlen(av[1]));
+        printf("ft_strlen : %zu", ft_strlen(av[1]));
+        printf("ft_strlen_bitwise : %zu", ft_strlen_bitwise(av[1]));
     }
     ft_putchar('\n');
     return (0);
