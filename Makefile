@@ -6,7 +6,7 @@
 #    By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 17:09:28 by lsauvage          #+#    #+#              #
-#    Updated: 2018/01/04 16:03:05 by lsauvage         ###   ########.fr        #
+#    Updated: 2018/02/06 19:54:35 by lsauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,6 +85,7 @@ SRC = 	ft_abs.c				\
 		ft_strjoin.c			\
 		ft_strlcat.c			\
 		ft_strlen.c				\
+		ft_strlen_bitwise.c		\
 		ft_strmap.c				\
 		ft_strmapi.c			\
 		ft_strncat.c			\
@@ -101,6 +102,7 @@ SRC = 	ft_abs.c				\
 		ft_swap.c				\
 		ft_tolower.c			\
 		ft_toupper.c			\
+		main.c					\
 
 OBJ = $(SRC:.c=.o)
 
