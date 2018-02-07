@@ -6,7 +6,7 @@
 #    By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 17:09:28 by lsauvage          #+#    #+#              #
-#    Updated: 2018/02/06 20:26:26 by lsauvage         ###   ########.fr        #
+#    Updated: 2018/02/07 19:02:24 by lsauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,33 +102,54 @@ SRC = 	ft_abs.c				\
 		ft_swap.c				\
 		ft_tolower.c			\
 		ft_toupper.c			\
-		main.c					\
 
 OBJ = $(SRC:.c=.o)
+
+.SILENT:
+
+# PROGRESS BAR
+T = $(words $(OBJ))
+N = 0
+C = $(words $N)$(eval N := x $N)
+ECHO = "[`expr $C  '*' 100 / $T`%]"
+
+#Colors
+_GREY=\x1b[30m
+_RED=\x1b[31m
+_GREEN=\x1b[32m
+_YELLOW=\x1b[33m
+_BLUE=\x1b[34m
+_PURPLE=\x1b[35m
+_CYAN=\x1b[36m
+_WHITE=\x1b[37m
+_END=\x1b[0m
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "\033[33m...creating archive...\033[0m"
-	@ar rc $(NAME) $(OBJ)
-	@echo "\033[33m...generating index... \033[0m"
-	@ranlib $(NAME)
-	@echo "\033[32m[OK]libft is ready\033[0m"
+	echo "$(_YELLOW)...creating archive...$(_END)"
+	ar rc $(NAME) $(OBJ)
+	echo "$(_YELLOW)...generating index... $(_END)"
+	ranlib $(NAME)
+	echo "$(_GREEN)[OK]libft is ready$(_END)"
 
 $(OBJ):
-	@echo "\033[33m...compiling sources...\033[0m"
-	@$(CC) $(FLAGS) $(OPTION) -c $(SRC)
+	$(CC) $(FLAGS) $(OPTION) -c $(SRC)
+	printf "%-60b\r" "$(ECHO) $(_PURPLE) Compiling $< $(_END)"
 
 clean:
-	@echo "\033[33m...removing object files... \033[0m"
-	@/bin/rm -f $(OBJ)
-	@echo "\033[32m[OK]\033[0m \033[33mall .o files are removed\033[0m"
+	echo "$(_YELLOW)...removing object files... $(_END)"
+	/bin/rm -f $(OBJ)
+	echo "$(_GREEN)[OK]$(_END) $(_YELLOW)all .o files are removed$(_END)"
+
+norme:
+	norminette -R CheckForbiddenSourceHeader $(SRC)
 
 fclean: clean
-	@echo "\033[33m...removing Library... \033[0m"
-	@/bin/rm -f $(NAME)
-	@echo "\033[32m[OK]\033[0m \033[31m$(NAME) is deleted\033[0m"
+	echo "$(_YELLOW)...removing Library... $(_END)"
+	/bin/rm -f $(NAME)
+	echo "$(_GREEN)[OK]$(_END) $(_RED)$(NAME) is deleted$(_END)"
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean norme fclean re
