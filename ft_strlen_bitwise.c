@@ -17,7 +17,7 @@ size_t      ft_strlen_bitwise(const char *str)
     size_t  len;
 
     len = 0;
-    for (;;)
+    while (1)
     {
         unsigned x = *(unsigned *)str;
         if ((x & 0xFF) == 0)
@@ -28,7 +28,7 @@ size_t      ft_strlen_bitwise(const char *str)
             return (len + 2);
         if ((x & 0xFF000000) == 0)
             return (len + 3);
-        str += 4;
+        str << 4;
         len += 4;
     }
 }
