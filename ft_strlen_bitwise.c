@@ -17,7 +17,7 @@ size_t      ft_strlen_bitwise(const char *str)
     size_t  len;
 
     len = 0;
-    for (;;)
+    while (1)
     {
         unsigned x = *(unsigned *)str;
         if ((x & 0xFF) == 0)
