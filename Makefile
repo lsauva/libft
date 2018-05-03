@@ -6,7 +6,7 @@
 #    By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 17:09:28 by lsauvage          #+#    #+#              #
-#    Updated: 2018/02/07 19:02:24 by lsauvage         ###   ########.fr        #
+#    Updated: 2018/04/27 15:37:58 by lsauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC = 	ft_abs.c				\
 		ft_isxdigit.c			\
 		ft_itoa.c				\
 		ft_lstadd.c				\
+		ft_lstadd_end.c			\
 		ft_lstat.c				\
 		ft_lstcount.c			\
 		ft_lstdel.c				\
