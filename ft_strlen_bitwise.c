@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/06 16:34:07 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/05/11 13:54:44 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:32:55 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t		ft_strlen_bitwise(const char *str)
 {
-	size_t		len;
-	unsigned	x;
+	size_t			len;
+	unsigned long	x;
 
 	len = 0;
 	while (1)
