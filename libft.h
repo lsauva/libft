@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:27:20 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/05/02 19:43:14 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:05:04 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-
 
 typedef struct		s_list
 {
