@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:27:20 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/05/11 16:05:04 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/09/20 15:06:20 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_line
+{
+	int				fd;
+	char			*line;
+	struct s_line	*next;
+}					t_line;
 
 int					ft_abs(int n);
 int					ft_atoi(const char *str);
@@ -107,5 +114,6 @@ char				*ft_strtrim(char const *s);
 void				ft_swap(int *a, int *b);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					get_next_line(int const fd, char **line);
 
 #endif
