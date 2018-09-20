@@ -6,7 +6,7 @@
 #    By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/29 17:09:28 by lsauvage          #+#    #+#              #
-#    Updated: 2018/04/27 15:37:58 by lsauvage         ###   ########.fr        #
+#    Updated: 2018/09/20 15:07:23 by lsauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,53 +103,68 @@ SRC = 	ft_abs.c				\
 		ft_swap.c				\
 		ft_tolower.c			\
 		ft_toupper.c			\
+		get_next_line.c			\
 
 OBJ = $(SRC:.c=.o)
 
 .SILENT:
 
-# PROGRESS BAR
-T = $(words $(OBJ))
-N = 0
-C = $(words $N)$(eval N := x $N)
-ECHO = "[`expr $C  '*' 100 / $T`%]"
+# Text Colors Red Green Yellow Blue Purple Cyan White
+_BLACK=\x1b[30m
+_R=\x1b[31m
+_G=\x1b[32m
+_Y=\x1b[33m
+_B=\x1b[34m
+_P=\x1b[35m
+_C=\x1b[36m
+_W=\x1b[37m
 
-#Colors
-_GREY=\x1b[30m
-_RED=\x1b[31m
-_GREEN=\x1b[32m
-_YELLOW=\x1b[33m
-_BLUE=\x1b[34m
-_PURPLE=\x1b[35m
-_CYAN=\x1b[36m
-_WHITE=\x1b[37m
-_END=\x1b[0m
+# Background Colors B = Back
+_B_BLACK=\x1b[40m
+_BR=\x1b[41m
+_BG=\x1b[42m
+_BY=\x1b[43m
+_BB=\x1b[44m
+_BP=\x1b[45m
+_BC=\x1b[46m
+_BW=\x1b[47m
+
+# End tag
+_E=\x1b[0m
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	echo "$(_YELLOW)...creating archive...$(_END)"
+	echo "$(_C)...creating archive...$(_E)"
 	ar rc $(NAME) $(OBJ)
-	echo "$(_YELLOW)...generating index... $(_END)"
+	echo "$(_C)...generating index... $(_E)"
 	ranlib $(NAME)
-	echo "$(_GREEN)[OK]libft is ready$(_END)"
+	echo "[$(_G) OK $(_E)] $(_BG) libft is ready $(_E)"
+	echo "\n"
+	echo "$(_G)  ___       ___  ________  ________ _________   $(_E)"
+	echo "$(_G) |\  \     |\  \|\   __  \|\  _____\\___   ___\ $(_E)"
+	echo "$(_G) \ \  \    \ \  \ \  \|\ /\ \  \__/\|___ \  \_| $(_E)"
+	echo "$(_G)  \ \  \    \ \  \ \   __  \ \   __\    \ \  \  $(_E)"
+	echo "$(_G)   \ \  \____\ \  \ \  \|\  \ \  \_|     \ \  \ $(_E)"
+	echo "$(_G)    \ \_______\ \__\ \_______\ \__\       \ \__\$(_E)"
+	echo "$(_G)     \|_______|\|__|\|_______|\|__|        \|__|$(_E)"
+	echo "\n"
 
 $(OBJ):
 	$(CC) $(FLAGS) $(OPTION) -c $(SRC)
-	printf "%-60b\r" "$(ECHO) $(_PURPLE) Compiling $< $(_END)"
 
 clean:
-	echo "$(_YELLOW)...removing object files... $(_END)"
+	echo "$(_Y)...removing object files... $(_E)"
 	/bin/rm -f $(OBJ)
-	echo "$(_GREEN)[OK]$(_END) $(_YELLOW)all .o files are removed$(_END)"
+	echo "[$(_G) OK $(_E)] $(_R)all .o files are removed$(_E)"
 
 norme:
 	norminette -R CheckForbiddenSourceHeader $(SRC)
 
 fclean: clean
-	echo "$(_YELLOW)...removing Library... $(_END)"
+	echo "$(_Y)...removing Library... $(_E)"
 	/bin/rm -f $(NAME)
-	echo "$(_GREEN)[OK]$(_END) $(_RED)$(NAME) is deleted$(_END)"
+	echo "[$(_G) OK $(_E)] $(_R)$(NAME) is deleted$(_E)"
 
 re: fclean all
 
