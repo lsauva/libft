@@ -6,7 +6,7 @@
 /*   By: lsauvage <lsauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:27:20 by lsauvage          #+#    #+#             */
-/*   Updated: 2018/09/20 15:06:20 by lsauvage         ###   ########.fr       */
+/*   Updated: 2018/09/20 15:38:28 by lsauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 # define LIBFT_H
 
 # include <unistd.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <strings.h>
+# include <sys/uio.h>
+# include <sys/types.h>
+# include <fcntl.h>
+# define BUFF_SIZE 64
+# define EOL '\n'
 
 typedef struct		s_list
 {
@@ -30,6 +37,12 @@ typedef struct		s_line
 	char			*line;
 	struct s_line	*next;
 }					t_line;
+
+typedef struct		s_buff
+{
+	char			mem[BUFF_SIZE + 1];
+	int				index;
+}					t_buff;
 
 int					ft_abs(int n);
 int					ft_atoi(const char *str);
